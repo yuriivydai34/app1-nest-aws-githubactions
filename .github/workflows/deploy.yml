@@ -24,9 +24,9 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # Створюємо архів. Включаємо dist, package.json, package-lock.json Procfile
+      # Створюємо архів. Включаємо dist, package.json, package-lock.json Procfile .ebextensions
       - name: Generate deployment package
-        run: zip -r deploy.zip dist package.json package-lock.json Procfile
+        run: zip -r deploy.zip dist package.json package-lock.json Procfile .ebextensions
 
       # Авторизація в AWS
       - name: Configure AWS Credentials
