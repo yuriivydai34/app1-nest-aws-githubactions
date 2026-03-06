@@ -12,5 +12,6 @@ export const AppDataSource = new DataSource({
   database: process.env.RDS_DB_NAME || process.env.DB_NAME,
   entities: ['dist/**/entities/*.entity.js'], // Вказуємо на JS у dist!
   migrations: ['dist/migrations/*.js'],
+  // migrations: [__dirname + '/../migrations/*.ts'], // Шлях відносно файлу data-source.ts
   synchronize: false,
 });
